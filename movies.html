@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - Myanmar Flix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Same header as index.html -->
+    </header>
+
+    <main class="movie-catalog">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> → <span>Movie Catalog</span>
+            </div>
+            
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sort-filter">Sort by:</label>
+                    <select id="sort-filter">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+                
+                <button class="filter-btn">Filter</button>
+            </div>
+            
+            <div class="movie-grid">
+                <!-- Movie items will be loaded via JavaScript -->
+                <div class="movie-item">
+                    <div class="movie-poster" style="background-image: url('videos/thumbs/movie1-thumb.jpg');">
+                        <div class="play-btn">▶</div>
+                        <div class="duration">01:45:00</div>
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">Movie Title 1</h3>
+                        <div class="movie-meta">
+                            <span class="year">2023</span>
+                            <span class="rating">★ 4.5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More movie items would be here -->
+            </div>
+            
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span>...</span>
+                <button class="page-btn">10</button>
+                <button class="next-btn">Next →</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/video-player.js"></script>
+</body>
+</html>
