@@ -443,3 +443,215 @@ ul {
     color: var(--gray-color);
     font-size: 0.9rem;
   }
+
+/* Pricing Page Styles */
+.pricing-page {
+    padding: 100px 0 50px;
+    background-color: #0a0a0a;
+}
+
+.pricing-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pricing-page .subtitle {
+    text-align: center;
+    color: var(--gray-color);
+    margin-bottom: 50px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.pricing-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 30px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card.recommended {
+    border: 2px solid var(--primary-color);
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.plan-name {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.plan-price {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.plan-price .period {
+    font-size: 1rem;
+    color: var(--gray-color);
+}
+
+.plan-features {
+    margin-bottom: 30px;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.plan-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.plan-features li:not(:contains('✖'))::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e50914'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+}
+
+.plan-features li:contains('✖')::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999999'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z'/%3E%3C/svg%3E");
+}
+
+.select-plan-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-plan-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.3s;
+    background-color: #1a1a1a;
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 200px;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+    }
+
+
+/* 404 Page Styles */
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.error-content h1 {
+    font-size: 6rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.error-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.error-content p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--gray-color);
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+    background-color: var(--secondary-color);
+}
